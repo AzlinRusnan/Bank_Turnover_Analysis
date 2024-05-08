@@ -1,7 +1,9 @@
 # <div align="center">BANK TURNOVER ANALYSIS</div>
 ![Intro](https://github.com/Pradnya1208/Telecom-Customer-Churn-prediction/blob/main/output/customer%20churn.jpeg?raw=true)
 
-## What is Customer Churn?
+## What is Customer Churn 🤔?
+**Click on the video to watch📺**
+
 [![Watch the video](https://img.youtube.com/vi/InOB1wXEkC8/0.jpg)](https://www.youtube.com/watch?v=InOB1wXEkC8)
 
 ## Overview:
@@ -36,7 +38,7 @@ The dataset used in this analysis contains the following key attributes:
 >![Customer Turnover Distribution](images/Distribution.png)
 >The dataset shows a significant difference between the number of customers who have left the bank ("Yes") and those who have stayed ("No").
 
-# More Project EDA & Results:
+# More project details on EDA & Results:
 **Click here:**
 [Bank Turnover Analysis](https://colab.research.google.com/drive/1T8MYyxysA7KzMLcFFeGgJyYvb5Yci3bA#scrollTo=lkCi_np54J5R)
 
