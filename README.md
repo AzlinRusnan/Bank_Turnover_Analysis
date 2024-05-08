@@ -25,27 +25,18 @@ The dataset used in this analysis contains the following key attributes:
 2.   CustomerId
 3.   Surname
 4.   CreditScore
-5.   Geography
-6.   Gender
-7.   Age
-8.   Tenure
-9.   Balance
-10.  NumOfProducts
-11.  HasCrCard
-12.  IsActiveMember
-13.  EstimatedSalary
-14.  Exited
-15.  Complain
-16.  Satisfaction Score
-17.  Card Type
-18.  Points Earned
+5.   Geography and more
 
 ## Implementation:
 
 **Libraries:** sklearn, Matplotlib, pandas, seaborn, and NumPy
+
 ## Few glimpses of EDA:
 ### 1. Customer Turnover Distribution
 ![Customer Turnover Distribution](images/Distribution.png)
 
-# Project EDA & Results:
+# More Project EDA & Results:
+**Click here:**
 [Bank Turnover Analysis](https://colab.research.google.com/drive/1T8MYyxysA7KzMLcFFeGgJyYvb5Yci3bA#scrollTo=lkCi_np54J5R)
+
+# Enjoy 👍
