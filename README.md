@@ -1,6 +1,9 @@
 # BANK TURNOVER ANALYSIS
 ![image](https://user-images.githubusercontent.com/58620359/174948746-5dc3418a-8296-4cc8-9561-f8f12ca9a0a4.png)
 
+# Video walkthroughs
+[![Watch the video](https://img.youtube.com/vi/InOB1wXEkC8/0.jpg)](https://www.youtube.com/watch?v=InOB1wXEkC8)
+
 ## Project Overview ✍️:
 
 This project focuses on analyzing bank turnover to identify key factors contributing to customer churn in the banking sector. By leveraging data-driven insights, we aim to propose strategies to improve customer retention and enhance service delivery.
