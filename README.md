@@ -34,15 +34,17 @@ The dataset used in this analysis contains the following key attributes:
 **Libraries:** sklearn, Matplotlib, pandas, seaborn, and NumPy
 
 ## Few glimpses of EDA:
-### 1. Customer Turnover Distribution
+### Customer Turnover Distribution
 >![Customer Turnover Distribution](images/Distribution.png)
 >The dataset shows a significant difference between the number of customers who have left the bank ("Yes") and those who have stayed ("No").
 
-### 2. Customer Turnover Distribution
-
+## Few glimpses of Model Prediction:
+### Importance Variables in the Model Prediction
+>![Customer Turnover Distribution](images/Var.png)
+>The key factors that significantly influence the deactivation of customers banking facilities are:- Age, Complain, Credit Score and IsActiveMember
 
 # More project details on EDA & Results:
 **Click here:**
-[Bank Turnover Analysis](https://colab.research.google.com/drive/1T8MYyxysA7KzMLcFFeGgJyYvb5Yci3bA#scrollTo=lkCi_np54J5R)
+[Bank Turnover Analysis](https://colab.research.google.com/drive/1T8MYyxysA7KzMLcFFeGgJyYvb5Yci3bA#scrollTo=x0U9wIqk--UY)
 
 # <div align="center">Enjoy 👍</div>
