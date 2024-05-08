@@ -1,20 +1,23 @@
-# BANK TURNOVER ANALYSIS
-![image](https://user-images.githubusercontent.com/58620359/174948746-5dc3418a-8296-4cc8-9561-f8f12ca9a0a4.png)
+# <div align="center">BANK TURNOVER ANALYSIS</div>
+![Intro](https://github.com/Pradnya1208/Telecom-Customer-Churn-prediction/blob/main/output/customer%20churn.jpeg?raw=true)
 
-# Video walkthroughs
+## What is Customer Churn?
 [![Watch the video](https://img.youtube.com/vi/InOB1wXEkC8/0.jpg)](https://www.youtube.com/watch?v=InOB1wXEkC8)
 
-## Project Overview ✍️:
+## Overview:
 
 This project focuses on analyzing bank turnover to identify key factors contributing to customer churn in the banking sector. By leveraging data-driven insights, we aim to propose strategies to improve customer retention and enhance service delivery.
 
-## Objectives ✍️
+## Objectives
 
 - **Understand Customer Behavior**: Analyze historical data to understand why customers leave the bank.
 - **Predictive Modeling**: Develop models to predict potential churn to enable proactive retention strategies.
 - **Actionable Insights**: Provide actionable recommendations based on the analysis to reduce turnover rates.
 
-## Data Description ✍️
+## Dataset:
+ [Bank Customer Churn](https://www.kaggle.com/datasets/radheshyamkollipara/bank-customer-churn/data)
+
+## Data Description
 
 The dataset used in this analysis contains the following key attributes:
 
@@ -37,4 +40,11 @@ The dataset used in this analysis contains the following key attributes:
 17.  Card Type
 18.  Points Earned
 
-Data is anonymized to protect personal information of the customers.
+## Implementation:
+
+**Libraries:** sklearn, Matplotlib, pandas, seaborn, and NumPy
+## Few glimpses of EDA:
+### 1. Customer Turnover Distribution
+
+# Project EDA & Results:
+[Bank Turnover Analysis](https://colab.research.google.com/drive/1T8MYyxysA7KzMLcFFeGgJyYvb5Yci3bA#scrollTo=lkCi_np54J5R)
