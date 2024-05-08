@@ -34,9 +34,12 @@ The dataset used in this analysis contains the following key attributes:
 **Libraries:** sklearn, Matplotlib, pandas, seaborn, and NumPy
 
 ## Few glimpses of EDA:
-### Customer Turnover Distribution
+### 1. Customer Turnover Distribution
 >![Customer Turnover Distribution](images/Distribution.png)
 >The dataset shows a significant difference between the number of customers who have left the bank ("Yes") and those who have stayed ("No").
+
+### 2. Customer Turnover Distribution
+
 
 # More project details on EDA & Results:
 **Click here:**
