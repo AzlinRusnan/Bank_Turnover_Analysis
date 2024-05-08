@@ -23,11 +23,11 @@ This project focuses on analyzing bank turnover to identify key factors contribu
 
 The dataset used in this analysis contains the following key attributes:
 
-1.   RowNumber
-2.   CustomerId
-3.   Surname
-4.   CreditScore
-5.   Geography and more
+- CustomerId, Surname: Identifiers and names, generally not useful for prediction.
+- CreditScore, Geography, Gender, Age: Demographic information.
+- Tenure, Balance, NumOfProducts, HasCrCard, IsActiveMember, EstimatedSalary: Financial and account-related details.
+- Exited: This is the target variable indicating whether a customer has churned (1) or not (0).
+- Complain, Satisfaction Score, Card Type, Point Earned: Additional customer satisfaction and engagement metrics.
 
 ## Implementation:
 
