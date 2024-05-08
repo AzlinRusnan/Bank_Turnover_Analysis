@@ -45,6 +45,6 @@ The dataset used in this analysis contains the following key attributes:
 
 # More project details on EDA & Results:
 **Click here:**
-[Bank Turnover Analysis](https://colab.research.google.com/drive/1T8MYyxysA7KzMLcFFeGgJyYvb5Yci3bA#scrollTo=x0U9wIqk--UY)
+[Bank Turnover Analysis](https://colab.research.google.com/drive/1T8MYyxysA7KzMLcFFeGgJyYvb5Yci3bA#scrollTo=lkCi_np54J5R))
 
 # <div align="center">Enjoy 👍</div>
