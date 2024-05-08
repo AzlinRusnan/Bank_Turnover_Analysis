@@ -1,1 +1,5 @@
+##Problem Statement:
+Customer turnover, also known as customer attrition, is a critical metric that can significantly impact the revenue and profitability of a business, especially within the banking sector. Turnover occurs when customers stop using a company's services or products, leading to reduced customer base and revenue. Identifying the key factors that contribute to customer turnover and predicting which customers are likely to turnover becomes essential to take proactive measures to retain them and thus ensure the sustainability and growth of the business.
 
+##Project Overview:
+This project aims to analyze customer data from a banking institution to understand the patterns and predictors of turnover. By employing machine learning techniques, we will develop a predictive model that can identify customers at high risk of turning over. This model will help the bank's marketing and customer success teams to take targeted actions to improve customer retention. The dataset includes demographic information, account details, transaction data, and customer interaction records, which will be explored to glean insights and predict turnover.
