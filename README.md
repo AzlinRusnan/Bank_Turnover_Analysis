@@ -117,12 +117,37 @@ The dataset used in this analysis contains the following key attributes:
 >
 >4. Customers who stayed have a narrower interquartile range (IQR), mostly concentrated between the ages of 30 and 40. In contrast, the age range for those who >exited is broader, with a lower quartile near 40 and an upper quartile extending to around 55.
 
+### 8. Correlation Matrix
+>![Correlation Matrix](images/CorrMatrix.png)
+>
+>**Insight:**
+>
+>The correlation matrix above highlights several important relationships:
+
+>1. Age: Shows a moderate positive correlation with Exited, suggesting that older customers are more likely to exit.
+>2. IsActiveMember: Has a negative correlation with Exited, confirming that active members are less likely to leave.
+>3. Balance: Has a small positive correlation, indicating a slight tendency for customers with higher balances to exit, which might be counterintuitive and >warrants further investigation.
+>4. NumOfProducts: Interestingly, there's a negative correlation here; customers with more products are slightly less likely to exit, which might suggest that >diversified services could help in retention.
+
 ## Few glimpses of Model Prediction:
 ### Importance Variables in the Model Prediction
 >![Customer Turnover Distribution](images/Var.png)
 >The key factors that significantly influence the deactivation of customers banking facilities are:- Age, Complain, Credit Score and IsActiveMember
 
-# More project details on EDA & Results:
+## Conclusion:
+>**Key-Points:**
+>1. Model Performance: The logistic regression model provided a reasonable baseline performance with turnover customers, which is evident from the low recall and
+>F1 score for the positive class.
+>2. Feature Importance: The feature importance analysis from the logistic regression model can provide insights into which factors are most influential in predicting customer turnover. Important features may include customer age, account balance, number of products, credit score, and activity level. Understanding these can help inform strategies to retain customers.
+>3. Business Insights: Active membership appears to be a strong indicator of retention, suggesting that efforts to engage customers could reduce turnover. Older >customers were more likely to turnover, highlighting a potential area to explore tailored retention strategies. The presence of a credit card did not show a >strong correlation with turnover, suggesting that simply having a credit card isn't a deciding factor in customer retention.
+>   
+>**Strategic Recommendations:**
+>1. Investigate the reasons behind the turnover of older customers and consider offering products or services that might be more appealing to them.
+>2. Enhance customer engagement and satisfaction, perhaps by improving customer service or offering loyalty programs, as active members are less likely to turnover.
+>3. Consider a more detailed analysis of the customers with high balances who exited to understand if there are specific services or products that are not meeting
+>   their needs.
+
+## More project details on EDA & Results:
 **Click here:**
 [Bank Turnover Analysis](https://colab.research.google.com/drive/1T8MYyxysA7KzMLcFFeGgJyYvb5Yci3bA#scrollTo=lkCi_np54J5R))
 
