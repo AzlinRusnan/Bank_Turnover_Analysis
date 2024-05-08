@@ -33,10 +33,89 @@ The dataset used in this analysis contains the following key attributes:
 
 **Libraries:** sklearn, Matplotlib, pandas, seaborn, and NumPy
 
-## Few glimpses of EDA:
-### Customer Turnover Distribution
+## Glimpses of EDA:
+
+### 1. Displaying Customer Turnover Distribution
 >![Customer Turnover Distribution](images/Distribution.png)
 >The dataset shows a significant difference between the number of customers who have left the bank ("Yes") and those who have stayed ("No").
+
+### 2. Displaying Customer Turnover by Gender
+>![Customer Turnover by Gender](images/Gender.png)
+>**Insight:**
+>
+>According to the Gender bar graph above, female customer leading the percentage of turnover (11.4%) from the bank compared to male(9.0%).
+>
+>**Recommendation:**
+>
+>Customer Research: Conduct surveys, focus groups, and interviews with female customers to understand their specific concerns, preferences, and needs. This >research can reveal insights into why they may be more likely to turn from bank.
+>Monitoring and Feedback: Regularly monitor the effectiveness of these strategies through ongoing feedback mechanisms and adjust them as necessary to ensure they >continue to meet the needs of female customers effectively
+
+### 3. Displaying Customer Turnover by Number of Product
+>![Customer Turnover by Number of Product](images/Product.png)
+>**Note:**
+>
+>Banks offer a wide range of products and services to meet the financial needs of their customers, ranging from basic banking services to more complex financial >solutions. For example here's a list of products from Maybank (https://www.maybank.com/en/products-and-services.page):
+>
+>1. Wealth Management
+>2. Insurance & Takaful 
+>3. Consume and Digital Solutions
+>4. Etc..
+>
+>**Insight:**
+>
+>The majority of customers hold either one or two products, while fewer customers have more than two products.
+>The highest turnover occurs among customers with only one product.
+>
+>**Recommendation:**
+>
+>Customer Research: Conduct surveys, focus groups, and interviews with female customers to understand their specific concerns, preferences, and needs. This >research can reveal insights into why they may be more likely to turn from bank.
+>Monitoring and Feedback: Regularly monitor the effectiveness of these strategies through ongoing feedback mechanisms and adjust them as necessary to ensure they >continue to meet the needs of female customers effectively.
+
+### 4. Displaying Customer Turnover by Active Member or Not
+>![Customer Turnover by Active Member or Not](images/Isactivemember.png)
+>**Insight:**
+>1. IsActiveMember: Indicates active membership status (1 = Active, 0 = Inactive).
+>2. Active members show a significantly lower turnover rate compared to inactive members, highlighting the importance of engagement in customer retention strategies.
+>
+>**Recommendation:**
+>
+>It is a loss if a bank loses its customer. Below are the few suggestions that can keep customer running away from a bank:
+
+>1. Loyalty Programs: Implementing loyalty programs that reward customers for their business can increase retention. Rewards could be in the form of better rates, >lower fees, or even non-banking perks.
+>2. Community Engagement: Banks that actively engage with their community, such as sponsoring local events or supporting local businesses, can build goodwill and >strong local customer base.
+
+### 5. Displaying Customer Turnover by Satisfaction Score
+>![Customer Turnover by Satisfaction Score](images/SatisfactionScore.png)
+> **Note:**
+>
+>The visualization for "Customer Turnover by Satisfaction Score" shows the distribution and impact of satisfaction scores on customer churn. The percentages >indicate how each satisfaction score segment contributes to the overall customer churn and retention with score 5 is the perfect score and 1 is the lowest score.
+
+>**Insights:**
+>
+>Satisfaction score of 2 appear to have higher churn rates, suggesting that less satisfied customers are more likely to leave. This relationship can guide >strategies to improve customer retention by focusing on enhancing satisfaction levels.
+
+### 6. Visualizing Customer Turnover by Balance.
+>![Customer Turnover by Balance](images/Balance.png)
+>**Insights:**
+>
+>Over 3,000 customers have a zero account balance. These customers are more likely to deactivate their accounts. When excluding zero values, the balance >distribution approximates a normal distribution.
+>
+>**Recommendations:**
+>
+>1. For customers with low or zero balances, strategies to engage them might be developed to prevent account dormancy and potentially convert them into more active, >profitable customers.
+>
+>2. Analyzing the needs of different segments might reveal opportunities for new financial products or services, especially targeted at high-balance customers who >show a higher propensity to turnover.
+
+### 7. Visualizing Customer Turnover by Age.
+>![Customer Turnover by Age](images/Age.png)
+>**Insights:**
+>1. Customers who exited are typically older than those who stayed. The distribution for those who exited is skewed towards older ages, while the distribution for >those who stayed is more concentrated in the younger age range.
+>
+>2. Notably, the peak for customers who exited (Yes) is much higher around ages 45 to 60, suggesting this age group is at higher risk of churning.
+>
+>3. The median age of customers who exited is higher than those who stayed. This is evident from the position of the median line in each box.
+>
+>4. Customers who stayed have a narrower interquartile range (IQR), mostly concentrated between the ages of 30 and 40. In contrast, the age range for those who >exited is broader, with a lower quartile near 40 and an upper quartile extending to around 55.
 
 ## Few glimpses of Model Prediction:
 ### Importance Variables in the Model Prediction
