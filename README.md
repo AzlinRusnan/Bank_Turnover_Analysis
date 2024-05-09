@@ -33,7 +33,7 @@ The dataset used in this analysis contains the following key attributes:
 
 **Libraries:** sklearn, Matplotlib, pandas, seaborn, and NumPy
 
-## Glimpses of EDA:
+## Exploratory Data Analysis
 
 ### 1. Displaying Customer Turnover Distribution
 >![Customer Turnover Distribution](images/Distribution.png)
@@ -47,8 +47,9 @@ The dataset used in this analysis contains the following key attributes:
 >
 >**Recommendation:**
 >
->Customer Research: Conduct surveys, focus groups, and interviews with female customers to understand their specific concerns, preferences, and needs. This >research can reveal insights into why they may be more likely to turn from bank.
->Monitoring and Feedback: Regularly monitor the effectiveness of these strategies through ongoing feedback mechanisms and adjust them as necessary to ensure they >continue to meet the needs of female customers effectively
+>1. **Customer Research:** Conduct surveys, focus groups, and interviews with female customers to understand their specific concerns, preferences, and needs. This >research can reveal insights into why they may be more likely to turn from bank.
+>
+>2. **Monitoring and Feedback:** Regularly monitor the effectiveness of these strategies through ongoing feedback mechanisms and adjust them as necessary to ensure they >continue to meet the needs of female customers effectively
 
 ### 3. Displaying Customer Turnover by Number of Product
 >![Customer Turnover by Number of Product](images/Product.png)
@@ -68,12 +69,14 @@ The dataset used in this analysis contains the following key attributes:
 >
 >**Recommendation:**
 >
->Customer Research: Conduct surveys, focus groups, and interviews with female customers to understand their specific concerns, preferences, and needs. This >research can reveal insights into why they may be more likely to turn from bank.
->Monitoring and Feedback: Regularly monitor the effectiveness of these strategies through ongoing feedback mechanisms and adjust them as necessary to ensure they >continue to meet the needs of female customers effectively.
+>1. **Customer Research:** Conduct surveys, focus groups, and interviews with female customers to understand their specific concerns, preferences, and needs. This >research can reveal insights into why they may be more likely to turn from bank.
+>
+>2. **Monitoring and Feedback:** Regularly monitor the effectiveness of these strategies through ongoing feedback mechanisms and adjust them as necessary to ensure they >continue to meet the needs of female customers effectively.
 
-### 4. Displaying Customer Turnover by Active Member or Not
+### 4. Displaying Customer Turnover Based on Active Status (Active vs. Non-Active)
 >![Customer Turnover by Active Member or Not](images/Isactivemember.png)
 >**Insight:**
+>
 >1. IsActiveMember: Indicates active membership status (1 = Active, 0 = Inactive).
 >2. Active members show a significantly lower turnover rate compared to inactive members, highlighting the importance of engagement in customer retention strategies.
 >
@@ -81,8 +84,8 @@ The dataset used in this analysis contains the following key attributes:
 >
 >It is a loss if a bank loses its customer. Below are the few suggestions that can keep customer running away from a bank:
 
->1. Loyalty Programs: Implementing loyalty programs that reward customers for their business can increase retention. Rewards could be in the form of better rates, >lower fees, or even non-banking perks.
->2. Community Engagement: Banks that actively engage with their community, such as sponsoring local events or supporting local businesses, can build goodwill and >strong local customer base.
+>1. **Loyalty Programs:** Implementing loyalty programs that reward customers for their business can increase retention. Rewards could be in the form of better rates, >lower fees, or even non-banking perks.
+>2. **Community Engagement:** Banks that actively engage with their community, such as sponsoring local events or supporting local businesses, can build goodwill and >strong local customer base.
 
 ### 5. Displaying Customer Turnover by Satisfaction Score
 >![Customer Turnover by Satisfaction Score](images/SatisfactionScore.png)
@@ -109,6 +112,7 @@ The dataset used in this analysis contains the following key attributes:
 ### 7. Visualizing Customer Turnover by Age.
 >![Customer Turnover by Age](images/Age.png)
 >**Insights:**
+>
 >1. Customers who exited are typically older than those who stayed. The distribution for those who exited is skewed towards older ages, while the distribution for >those who stayed is more concentrated in the younger age range.
 >
 >2. Notably, the peak for customers who exited (Yes) is much higher around ages 45 to 60, suggesting this age group is at higher risk of churning.
@@ -124,26 +128,73 @@ The dataset used in this analysis contains the following key attributes:
 >
 >The correlation matrix above highlights several important relationships:
 
->1. Age: Shows a moderate positive correlation with Exited, suggesting that older customers are more likely to exit.
->2. IsActiveMember: Has a negative correlation with Exited, confirming that active members are less likely to leave.
->3. Balance: Has a small positive correlation, indicating a slight tendency for customers with higher balances to exit, which might be counterintuitive and >warrants further investigation.
->4. NumOfProducts: Interestingly, there's a negative correlation here; customers with more products are slightly less likely to exit, which might suggest that >diversified services could help in retention.
+>1. **Age**: Shows a moderate positive correlation with Exited, suggesting that older customers are more likely to exit.
+>   
+>2. **IsActiveMember**: Has a negative correlation with Exited, confirming that active members are less likely to leave.
+>   
+>3. **Balance**: Has a small positive correlation, indicating a slight tendency for customers with higher balances to exit, which might be counterintuitive and >warrants further investigation.
+>   
+>4. **NumOfProducts**: Interestingly, there's a negative correlation here; customers with more products are slightly less likely to exit, which might suggest that >diversified services could help in retention.
 
-## Few glimpses of Model Prediction:
-### Importance Variables in the Model Prediction
+## Machine Learning
+
+### 1. Encoding Categorical Columns and Splitting the Dataset
+>**Insight:**
+>
+>1. **Encoding Categorical Variables:** Convert categorical variables like Geography, Gender, and Card Type into a format that can be used by machine learning >algorithms.
+>   
+>2. **Data Splitting:** Split the dataset into a training set and a testing set. By splitting the data, we ensure that we're not just making a model that's good on >paper but one that will actually work well when it's used in real applications.
+>**The training set includes 8,000 samples, and the testing set includes 2,000 samples, with 14 features in each.**
+
+### 2. Model Creation using Logistic Regression
+>Logistic Regression is a type of statistical analysis used to predict the outcome of a variable that can be one of two types; 0 (no chance)
+>& 1 (certain to >happen)
+>
+>**Result:**
+>
+>**Accuracy Score** of Model on Test Data is => 79.2 %
+>
+>**F1 Score** of the Model is => 0.0956521739130435
+>
+>**Recall Score** of the Model is => 0.05392156862745098
+>
+>**Precision Score** of the Model is => 0.4230769230769231
+>
+>**Insight:**
+>
+>The Logistic Regression model achieved an accuracy of 79.2% on the test set. However, a closer look at the precision, recall, and F1-score reveals some important >details:
+>
+>1. **Precision Score** for class 1 (exited) is relatively low at 42%, indicating that the model isn't very good at identifying exited customers accurately.
+>   
+>2. **Recall** for class 1 is very low at 5%, meaning the model fails to identify a significant portion of the actual exited customers.
+>   
+>3. **F1-score** for class 1 is also quite low at 10%, which combines precision and recall, indicating poor performance on the minority class.
+>   
+>Logistic Regression seems to not be a best model for this data. Below is the Implication and Suggestions:
+>
+>1. **Class Imbalance:** One common reason for such results is class imbalance. Non-exited customer is more than exited customer. The model might be biased towards predicting the majority class (non-exited). It's worth checking the class distribution and considering techniques like SMOTE, adjusting class weights, or resampling to address imbalance.
+>   
+>2. **Model and Variables Reassessment:** The current variables might not be strong indicators of the outcome, or logistic regression may not be the best model for this data. We will consider exploring other models like Random Forests or Gradient Boosting Machines (GBMs), which we will learn in near future.
+
+
+### 3. Importance Variables in the Model Prediction
 >![Customer Turnover Distribution](images/Var.png)
 >The key factors that significantly influence the deactivation of customers banking facilities are:- Age, Complain, Credit Score and IsActiveMember
 
 ## Conclusion:
 >**Key-Points:**
->1. Model Performance: The logistic regression model provided a reasonable baseline performance with turnover customers, which is evident from the low recall and
->F1 score for the positive class.
->2. Feature Importance: The feature importance analysis from the logistic regression model can provide insights into which factors are most influential in predicting customer turnover. Important features may include customer age, account balance, number of products, credit score, and activity level. Understanding these can help inform strategies to retain customers.
->3. Business Insights: Active membership appears to be a strong indicator of retention, suggesting that efforts to engage customers could reduce turnover. Older >customers were more likely to turnover, highlighting a potential area to explore tailored retention strategies. The presence of a credit card did not show a >strong correlation with turnover, suggesting that simply having a credit card isn't a deciding factor in customer retention.
+>1. **Model Performance:** The logistic regression model provided a reasonable baseline performance with turnover customers, which is evident from the low recall and F1 score for the positive class.
+>   
+>2. **Feature Importance:** The feature importance analysis from the logistic regression model can provide insights into which factors are most influential in predicting customer turnover. Important features may include customer age, account balance, number of products, credit score, and activity level. Understanding these can help inform strategies to retain customers.
+>
+>3. **Business Insights:** Active membership appears to be a strong indicator of retention, suggesting that efforts to engage customers could reduce turnover. Older >customers were more likely to turnover, highlighting a potential area to explore tailored retention strategies. The presence of a credit card did not show a >strong correlation with turnover, suggesting that simply having a credit card isn't a deciding factor in customer retention.
 >   
 >**Strategic Recommendations:**
+>
 >1. Investigate the reasons behind the turnover of older customers and consider offering products or services that might be more appealing to them.
+> 
 >2. Enhance customer engagement and satisfaction, perhaps by improving customer service or offering loyalty programs, as active members are less likely to turnover.
+> 
 >3. Consider a more detailed analysis of the customers with high balances who exited to understand if there are specific services or products that are not meeting
 >   their needs.
 
