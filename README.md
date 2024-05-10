@@ -45,6 +45,7 @@ The dataset used in this analysis contains the following key attributes:
 
 ### 2. Checking the Total Number of Missing Values
 >
+>![Total Number of Missing Values](images/missingvalues.png)
 >
 >**Insight:**
 >
@@ -64,6 +65,7 @@ The dataset used in this analysis contains the following key attributes:
 >We dropping ["RowNumber","CustomerId","Surname"] as they did not give significant contribution to the analysis
 
 ### 5. Renaming Values in Exited Column
+>![Renaming Values in Exited Column](images/onezero.png)  to  ![Renaming Values in Exited Column](images/yesno.png)
 >
 >**Insight:**
 >
