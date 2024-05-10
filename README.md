@@ -288,8 +288,12 @@ plt.show()
 > 
 >3. Consider a more detailed analysis of the customers with high balances who exited to understand if there are specific services or products that are not meeting
 >   their needs.
+>   
+
+*Side Note:*
+*The goal of this analysis is not only to predict turnover but also to understand its drivers so that targeted actions can be taken to reduce it. With these insights, a business can develop focused retention strategies to maintain a healthier customer base.*
 
 ## If you are interested to look on more details on each Coding, EDA & Results
-## Click here: [Bank Turnover Analysis](https://colab.research.google.com/drive/1T8MYyxysA7KzMLcFFeGgJyYvb5Yci3bA#scrollTo=lkCi_np54J5R))
+## Click here: [Bank Turnover Analysis](https://colab.research.google.com/drive/1T8MYyxysA7KzMLcFFeGgJyYvb5Yci3bA#scrollTo=lkCi_np54J5R)
 
 # <div align="center">Enjoy 👍</div>
