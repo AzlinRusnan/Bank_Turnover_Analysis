@@ -6,23 +6,24 @@
 
 [![Watch the video](https://img.youtube.com/vi/InOB1wXEkC8/0.jpg)](https://www.youtube.com/watch?v=InOB1wXEkC8)
 
-## Overview:
+## Project Overview:
 
 This project focuses on analyzing bank turnover to identify key factors contributing to customer churn in the banking sector. By leveraging data-driven insights, we aim to propose strategies to improve customer retention and enhance service delivery.
 
-## Objectives
+## Objectives:
 
 - **Understand Customer Behavior**: Analyze historical data to understand why customers leave the bank.
 - **Predictive Modeling**: Develop models to predict potential churn to enable proactive retention strategies.
 - **Actionable Insights**: Provide actionable recommendations based on the analysis to reduce turnover rates.
 
-## Dataset:
- [Bank Customer Churn](https://www.kaggle.com/datasets/radheshyamkollipara/bank-customer-churn/data)
+## Dataset 📖:
+ The source of the data is from [Bank Customer Churn](https://www.kaggle.com/datasets/radheshyamkollipara/bank-customer-churn/data)
 
-## Data Description
+## Data Description:
 
 The dataset used in this analysis contains the following key attributes:
 
+- RowNumber : Identification for each row.
 - CustomerId, Surname: Identifiers and names, generally not useful for prediction.
 - CreditScore, Geography, Gender, Age: Demographic information.
 - Tenure, Balance, NumOfProducts, HasCrCard, IsActiveMember, EstimatedSalary: Financial and account-related details.
@@ -33,7 +34,43 @@ The dataset used in this analysis contains the following key attributes:
 
 **Libraries:** sklearn, Matplotlib, pandas, seaborn, and NumPy
 
-## Exploratory Data Analysis
+## Data Cleaning
+
+### 1. Checking Data Information
+>![Data Information](images/datainfo.png)
+>
+>**Insight:**
+>
+>The dataset contains 10,000 records across 18 columns, which include 15 numerical and 3 categorical columns.
+
+### 2. Checking the Total Number of Missing Values
+>
+>
+>**Insight:**
+>
+>As indicated by the table, there are no missing values; therefore, data imputation is not necessary.
+
+### 3. Checking for Duplicate Values
+>
+>**Insight:**
+>
+>There is 0 duplicate row in the dataset
+
+### 4. Dropping Irrelevant Columns
+>![Dropping Irrelevant Columns](images/drop1.png)
+>
+>**Insight:**
+>
+>We dropping ["RowNumber","CustomerId","Surname"] as they did not give significant contribution to the analysis
+
+### 5. Renaming Values in Exited Column
+>
+>**Insight:**
+>
+>For this report, since we need to check and compare other variables with the Exited column, we decided to change the Exited column from binary values (0, 1) to (No, Yes) to enhance visibility during the analysis. Additionally, we will retain the four columns with binary numbers as we believe they will be beneficial for later statistical analysis.
+
+
+## Exploratory Data Analysis 📊:
 
 ### 1. Displaying Customer Turnover Distribution
 >![Customer Turnover Distribution](images/Distribution.png)
@@ -136,17 +173,51 @@ The dataset used in this analysis contains the following key attributes:
 >   
 >4. **NumOfProducts**: Interestingly, there's a negative correlation here; customers with more products are slightly less likely to exit, which might suggest that >diversified services could help in retention.
 
-## Machine Learning
+## Machine Learning 🦾:
 
 ### 1. Encoding Categorical Columns and Splitting the Dataset
+``` Python
+# Encoding categorical columns
+label_encoder = LabelEncoder()
+categorical_cols = ['Geography', 'Gender', 'Card Type']
+for col in categorical_cols:
+    df[col] = label_encoder.fit_transform(df[col])
+
+# Splitting the dataset into training and testing sets
+X = df.drop('Exited', axis=1)
+y = df['Exited']
+X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.2, random_state=42, stratify=y)
+
+# Checking the shapes of the splits
+X_train.shape, X_test.shape, y_train.shape, y_test.shape
+```
 >**Insight:**
 >
 >1. **Encoding Categorical Variables:** Convert categorical variables like Geography, Gender, and Card Type into a format that can be used by machine learning >algorithms.
 >   
 >2. **Data Splitting:** Split the dataset into a training set and a testing set. By splitting the data, we ensure that we're not just making a model that's good on >paper but one that will actually work well when it's used in real applications.
+>   
 >**The training set includes 8,000 samples, and the testing set includes 2,000 samples, with 14 features in each.**
 
 ### 2. Model Creation using Logistic Regression
+``` Python
+# Training Logistic Regression Model
+logistic_model = LogisticRegression(max_iter=1000, random_state=42)
+logistic_model.fit(X_train, y_train)
+
+# Predicting on the test set
+y_pred_logistic = logistic_model.predict(X_test)
+
+# Evaluating the model
+accuracy_logistic = accuracy_score(y_test, y_pred_logistic)
+print("Accuracy Score of Model on Test Data is =>", round(accuracy_logistic * 100, 2), "%")
+
+report_logistic = classification_report(y_test, y_pred_logistic, output_dict=True)
+
+print("F1 Score of the Model is =>", f1_score(y_test, y_pred_logistic))
+print("Recall Score of the Model is =>", recall_score(y_test, y_pred_logistic))
+print("Precision Score of the Model is =>", precision_score(y_test, y_pred_logistic))
+```
 >Logistic Regression is a type of statistical analysis used to predict the outcome of a variable that can be one of two types; 0 (no chance)
 >& 1 (certain to >happen)
 >
@@ -178,6 +249,26 @@ The dataset used in this analysis contains the following key attributes:
 
 
 ### 3. Importance Variables in the Model Prediction
+``` Python
+importance = logistic_model.coef_[0]
+
+# Matching the Variables importance with the column names of the training data
+features = X_train.columns
+importance_df = pd.DataFrame({'Variable Name': features, 'Importance': importance})
+
+# Since we want to visualize the absolute values of the importance
+importance_df['Importance'] = np.abs(importance_df['Importance'])
+
+# Sort the Variables by importance
+importance_df = importance_df.sort_values(by='Importance', ascending=False)
+
+# Visualizing the Importance Variables
+plt.figure(figsize=(12,7))
+sns.barplot(x="Importance", y="Variable Name", data=importance_df, palette="plasma")
+plt.title("Importance Variables in the Model Prediction", fontweight="black", size=20, pad=20)
+plt.yticks(size=12)
+plt.show()
+```
 >![Customer Turnover Distribution](images/Var.png)
 >The key factors that significantly influence the deactivation of customers banking facilities are:- Age, Complain, Credit Score and IsActiveMember
 
@@ -198,8 +289,7 @@ The dataset used in this analysis contains the following key attributes:
 >3. Consider a more detailed analysis of the customers with high balances who exited to understand if there are specific services or products that are not meeting
 >   their needs.
 
-## More project details on EDA & Results:
-**Click here:**
-[Bank Turnover Analysis](https://colab.research.google.com/drive/1T8MYyxysA7KzMLcFFeGgJyYvb5Yci3bA#scrollTo=lkCi_np54J5R))
+## If you are interested to look on more details on each Coding, EDA & Results
+## Click here: [Bank Turnover Analysis](https://colab.research.google.com/drive/1T8MYyxysA7KzMLcFFeGgJyYvb5Yci3bA#scrollTo=lkCi_np54J5R))
 
 # <div align="center">Enjoy 👍</div>
